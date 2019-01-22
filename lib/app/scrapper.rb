@@ -34,4 +34,12 @@ class Scrapping
     end
     ws.save
   end
+
+  def save_as_csv
+    csv = CSV.open("db/email.csv", "w")
+    csv << ["Index", "Mairie", "Mail"]
+    @mail_list.each_with_index do |(name, mail), index|
+      csv << [index, name, mail]
+    end
+  end
 end

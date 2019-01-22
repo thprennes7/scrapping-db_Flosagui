@@ -7,9 +7,10 @@ require 'app/scrapper'
 require 'bundler'
 require 'open-uri'
 require 'json'
+require 'csv'
 
 Bundler.require
 Dotenv.load
 
-scrapper = Scrapping.new
-scrapper.save_as_spreadsheet
+index = Index.new
+done = Done.new
