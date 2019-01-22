@@ -22,4 +22,16 @@ class Scrapping
     file.close
   end
 
+  def save_as_spreadsheet
+    session = GoogleDrive::Session.from_config("config.json")
+    ws = session.spreadsheet_by_key("1epRxZFV07u3vgZDgUyexrR3SeUKxJp8e50rzfY2U6o4").worksheets[0]
+
+    ws[1, 1] = "Mairie"
+    ws[1, 2] = "Email"
+    @mail_list.each_with_index do |(name, mail), index|
+      ws[index + 2, 1] = name
+      ws[index + 2, 2] = mail
+    end
+    ws.save
+  end
 end

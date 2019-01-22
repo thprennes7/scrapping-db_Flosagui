@@ -12,4 +12,4 @@ Bundler.require
 Dotenv.load
 
 scrapper = Scrapping.new
-scrapper.save_as_json
+scrapper.save_as_spreadsheet
