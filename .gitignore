@@ -1,3 +1,5 @@
 .env
 config.JSON
 config.json
+db/email.csv
+db/email.JSON
