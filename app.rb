@@ -11,10 +11,10 @@ require 'open-uri'
 require 'json'
 require 'csv'
 
-# On installe nos gems 
+# On appel les dépendances notés dans le Gemfile
 Bundler.require
 Dotenv.load
 
-# On crée nos objets 
+# On crée nos objets
 index = Index.new
 done = Done.new
