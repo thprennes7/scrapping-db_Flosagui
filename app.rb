@@ -5,6 +5,11 @@ require 'views/index'
 require 'views/done'
 require 'app/scrapper'
 require 'bundler'
+require 'open-uri'
+require 'json'
 
 Bundler.require
 Dotenv.load
+
+scrapper = Scrapping.new
+scrapper.save_as_json
